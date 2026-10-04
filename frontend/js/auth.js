@@ -1,6 +1,6 @@
 // Authentication - connected to backend
 
-const API = "http://localhost:5000/api";
+const API = "https://siwes-finder-api.onrender.com/api";
 
 document.addEventListener("DOMContentLoaded", () => {
   const loginForm = document.getElementById("login-form");
