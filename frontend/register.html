@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register – SIWES Finder</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="index.html" class="text-2xl font-bold text-green-600">SIWES Finder</a>
+      <a href="login.html" class="text-green-600 hover:underline">Already have an account?</a>
+    </div>
+  </nav>
+
+  <!-- Register Form -->
+  <main class="flex-1 flex items-center justify-center px-4 py-12">
+    <div class="bg-white w-full max-w-md rounded-2xl shadow-sm p-8">
+      <h1 class="text-2xl font-bold text-center text-gray-900">Create Account</h1>
+      <p class="text-center text-gray-600 mt-2 mb-8">Join SIWES Finder to discover placements</p>
+
+      <form id="register-form" class="space-y-5">
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+          <input type="text" id="name" required
+            class="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-green-500"
+            placeholder="Chinedu Okoro">
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+          <input type="email" id="email" required
+            class="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-green-500"
+            placeholder="you@example.com">
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+          <input type="password" id="password" required minlength="6"
+            class="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-green-500"
+            placeholder="Minimum 6 characters">
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Course / Department</label>
+          <input type="text" id="course"
+            class="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-green-500"
+            placeholder="e.g. Computer Science">
+        </div>
+
+        <button type="submit"
+          class="w-full bg-green-600 text-white py-3 rounded-lg font-medium hover:bg-green-700 transition">
+          Create Account
+        </button>
+      </form>
+
+      <p class="text-center text-sm text-gray-600 mt-6">
+        Already have an account?
+        <a href="login.html" class="text-green-600 font-medium hover:underline">Login</a>
+      </p>
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

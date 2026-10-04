@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Dashboard – SIWES Finder</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <nav class="bg-white nav-shadow sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 py-3.5 flex items-center justify-between">
+      <a href="index.html" class="text-xl sm:text-2xl font-bold text-green-600 tracking-tight">SIWES Finder</a>
+      
+      <div class="hidden md:flex items-center gap-7 text-[15px]">
+        <a href="openings.html" class="text-gray-600 hover:text-green-600 transition">Openings</a>
+        <a href="dashboard.html" class="text-green-600 font-medium">Dashboard</a>
+        <a href="index.html" class="text-gray-600 hover:text-green-600 transition">Logout</a>
+      </div>
+
+      <button id="menu-btn" class="md:hidden p-1.5 text-gray-600 hover:bg-gray-100 rounded-md">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden border-t border-gray-100 px-4 py-3 space-y-1 bg-white">
+      <a href="openings.html" class="block py-2.5 px-2 rounded text-gray-700 hover:bg-gray-50">Openings</a>
+      <a href="dashboard.html" class="block py-2.5 px-2 rounded text-green-600 font-medium">Dashboard</a>
+      <a href="index.html" class="block py-2.5 px-2 rounded text-gray-700 hover:bg-gray-50">Logout</a>
+    </div>
+  </nav>
+
+  <main class="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+    <h1 class="text-2xl sm:text-3xl font-bold text-gray-900">My Dashboard</h1>
+    <p class="mt-1 text-gray-500 text-sm">Welcome back. Here are your applications.</p>
+
+    <!-- Summary cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6">
+      <div class="bg-white border border-gray-200 rounded-lg p-4">
+        <p class="text-sm text-gray-500">Total Applications</p>
+        <p class="text-2xl font-bold text-gray-900 mt-1">3</p>
+      </div>
+      <div class="bg-white border border-gray-200 rounded-lg p-4">
+        <p class="text-sm text-gray-500">Pending</p>
+        <p class="text-2xl font-bold text-yellow-600 mt-1">2</p>
+      </div>
+      <div class="bg-white border border-gray-200 rounded-lg p-4">
+        <p class="text-sm text-gray-500">Accepted</p>
+        <p class="text-2xl font-bold text-green-600 mt-1">1</p>
+      </div>
+    </div>
+
+    <!-- Applications table -->
+    <div class="mt-8 bg-white border border-gray-200 rounded-lg overflow-hidden">
+      <div class="px-5 py-4 border-b border-gray-100">
+        <h2 class="font-semibold text-gray-900">My Applications</h2>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead class="bg-gray-50 text-left text-gray-500">
+            <tr>
+              <th class="px-5 py-3 font-medium">Company</th>
+              <th class="px-5 py-3 font-medium">Position</th>
+              <th class="px-5 py-3 font-medium">Status</th>
+              <th class="px-5 py-3 font-medium">Date</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100">
+            <tr>
+              <td class="px-5 py-3.5">
+                <p class="font-medium text-gray-900">TechNova Solutions</p>
+                <p class="text-xs text-gray-500">Lagos</p>
+              </td>
+              <td class="px-5 py-3.5 text-gray-700">Frontend Web Development Intern</td>
+              <td class="px-5 py-3.5">
+                <span class="text-xs font-medium bg-yellow-50 text-yellow-700 px-2 py-1 rounded-full border border-yellow-100">Pending</span>
+              </td>
+              <td class="px-5 py-3.5 text-gray-500">12 Sep 2026</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3.5">
+                <p class="font-medium text-gray-900">DataSphere Nigeria</p>
+                <p class="text-xs text-gray-500">Abuja</p>
+              </td>
+              <td class="px-5 py-3.5 text-gray-700">Data Analyst Intern</td>
+              <td class="px-5 py-3.5">
+                <span class="text-xs font-medium bg-yellow-50 text-yellow-700 px-2 py-1 rounded-full border border-yellow-100">Pending</span>
+              </td>
+              <td class="px-5 py-3.5 text-gray-500">10 Sep 2026</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3.5">
+                <p class="font-medium text-gray-900">BuildRight Construction</p>
+                <p class="text-xs text-gray-500">Rivers</p>
+              </td>
+              <td class="px-5 py-3.5 text-gray-700">Civil Engineering Intern</td>
+              <td class="px-5 py-3.5">
+                <span class="text-xs font-medium bg-green-50 text-green-700 px-2 py-1 rounded-full border border-green-100">Accepted</span>
+              </td>
+              <td class="px-5 py-3.5 text-gray-500">05 Sep 2026</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="mt-6">
+      <a href="openings.html" class="btn-green inline-block px-5 py-2.5 rounded-md text-sm">
+        Browse more openings
+      </a>
+    </div>
+  </main>
+
+  <footer class="bg-gray-900 text-gray-400 py-8 mt-auto">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-sm">
+      <div class="font-semibold text-white">SIWES Finder</div>
+      <p>Helping Nigerian students find industrial training placements</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
