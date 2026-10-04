@@ -1,6 +1,6 @@
 // Openings page - load from backend + filters
 
-const API = "http://localhost:5000/api";
+const API = "https://siwes-finder-api.onrender.com/api";
 
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("openings-list");
