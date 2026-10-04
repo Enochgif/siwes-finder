@@ -1,6 +1,6 @@
 // Dashboard - load user's applications from backend
 
-const API = "http://localhost:5000/api";
+const API = "https://siwes-finder-api.onrender.com/api";
 
 document.addEventListener("DOMContentLoaded", () => {
   const userStr = localStorage.getItem("user");
